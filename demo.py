@@ -3,7 +3,7 @@ import ast
 import os
 from glob import glob
 from time import time
-
+import cv2 as cv
 import numpy as np
 import scipy.io as sio
 from skimage.io import imread, imsave
@@ -40,8 +40,10 @@ def main(args):
     for i, image_path in enumerate(image_path_list):
 
         name = image_path.strip().split('/')[-1][:-4]
+        print(image_path)
 
         # read image
+        img = cv.imread(image_path)
         image = imread(image_path)
         [h, w, c] = image.shape
         if c > 3:
