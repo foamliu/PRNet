@@ -41,6 +41,7 @@ def main(args):
 
         name = image_path.strip().split('/')[-1][:-4]
         print(image_path)
+        print(name)
 
         # read image
         img = cv.imread(image_path)
