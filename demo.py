@@ -134,9 +134,9 @@ def main(args):
             # cv2.imshow('pose', plot_pose_box(image, camera_matrix, kpt))
             # cv2.waitKey(0)
             cv2.imwrite(name + '_image.jpg', image)
-            cv2.imwrite(name + '_sparse_alignment.jpg', plot_kpt(image, kpt))
-            cv2.imwrite(name + '_dense_alignment.jpg', plot_vertices(image, vertices))
-            cv2.imwrite(name + '_pose.jpg', plot_pose_box(image, camera_matrix, kpt))
+            cv2.imwrite(name + '_sparse_alignment.jpg', plot_kpt(img, kpt))
+            cv2.imwrite(name + '_dense_alignment.jpg', plot_vertices(img, vertices))
+            cv2.imwrite(name + '_pose.jpg', plot_pose_box(img, camera_matrix, kpt))
 
 
 if __name__ == '__main__':
